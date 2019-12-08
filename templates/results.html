@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1>Here are your recommended movies!</h1>
+  <ul>
+    {% for m in movies %}
+    <li> {{ m }} </li>
+    {% endfor %}
+  </ul>
+  <br>
+  <!-- <a href="/">Go back to main page</a> -->
+  <button onclick="location.href='/'" type="submit" class="btn btn-primary btn-xl">
+  Go back to the main page
+</button>
+  <br>
+  <br>
+
+{% endblock %}
