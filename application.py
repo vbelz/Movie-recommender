@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from recommender import movie_recommender
+from recommender_tools import Recommender
 
 app = Flask(__name__)
 
@@ -23,7 +23,8 @@ def results():
     ratings = list(user_input)[1::2] #list of strings
     print(movies)
     print(ratings)
-    movie_list = movie_recommender(5, movies, ratings)
+    new_recommendation = Recommender(5, movies, ratings)
+    movie_list = new_recommendation.read_db_get_predictions()
     print(movie_list)
 
     return render_template('results.html', movies=movie_list)
