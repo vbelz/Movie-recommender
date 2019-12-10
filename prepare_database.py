@@ -1,6 +1,6 @@
 import os
-import pandas as pd
 import re
+import pandas as pd
 from sqlalchemy import create_engine
 
 
@@ -14,9 +14,7 @@ df_ratings = pd.read_csv(data_folder+'ratings.csv')
 Save_to_postgres = False
 Save_to_sqlite = True
 
-df_movies.shape, df_ratings.shape
-
-df_merge = pd.merge(df_ratings,df_movies,how='outer',left_on='movieId',right_on='movieId')
+df_merge = pd.merge(df_ratings, df_movies, how='outer', left_on='movieId', right_on='movieId')
 
 def get_year(x):
     '''Extract year from title'''
@@ -36,7 +34,7 @@ cols = ['userId','movieId','rating','title','genres','year','timestamp']
 df_merge = df_merge[cols]
 
 #Sort increasing order
-df_merge.sort_values(by=['movieId'],inplace=True)
+df_merge.sort_values(by=['movieId'], inplace=True)
 #Remove movies without any rating at all
 df_merge.dropna(subset=['userId'], how='any',inplace=True)
 

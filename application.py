@@ -21,10 +21,8 @@ def results():
 
     movies = list(user_input)[::2] #list of strings
     ratings = list(user_input)[1::2] #list of strings
-    print(movies)
-    print(ratings)
+
     new_recommendation = Recommender(5, movies, ratings)
     movie_list = new_recommendation.read_db_get_predictions()
-    print(movie_list)
 
     return render_template('results.html', movies=movie_list)

@@ -1,0 +1,8 @@
+Flask
+sqlalchemy
+sklearn
+pytest
+pandas
+numpy
+fuzzywuzzy
+python-Levenshtein

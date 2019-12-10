@@ -10,7 +10,7 @@ from sklearn.decomposition import NMF
 
 class Recommender:
 
-    def __init__(self,nb_movies, movie_list, ratings_list):
+    def __init__(self, nb_movies, movie_list, ratings_list):
         """ Getting the number of movies to recommend, the movie
         list and associated rating from the user """
         self.nb_movies = nb_movies
@@ -34,9 +34,9 @@ class Recommender:
         #List of title
         list_title_movies = df_data.groupby('movieId')['title'].first().values
         #dictionary id to title
-        movie_id_to_title_dictionary = dict(zip(list_id_movies,list_title_movies))
+        movie_id_to_title_dictionary = dict(zip(list_id_movies, list_title_movies))
         #dictionary title to id
-        movie_title_to_id_dictionary = dict(zip(list_title_movies,list_id_movies))
+        movie_title_to_id_dictionary = dict(zip(list_title_movies, list_id_movies))
 
         user_id_movies = self.get_movie_id_for_user(self.movie_list, list_title_movies, movie_title_to_id_dictionary)
 
@@ -179,7 +179,7 @@ class Recommender:
         return movie_to_recommend
 
         def train_nmf(self, df_data):
-
+            """ train nmf model and save to disk """
             #Get pivot tabme userId, movieId and ratings
             df_pivot = pd.pivot_table(df_merge, 'rating', 'userId', 'movieId')
 
