@@ -11,7 +11,7 @@ this [link](http://vincentbelz.pythonanywhere.com).
 
 The dataset of movies and ratings I will be using is the movielens dataset available at:
 
-[https://www.ssa.gov/oact/babynames/limits.html](https://grouplens.org/datasets/movielens/)
+[https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/)
 
 ## Prepare the database
 
@@ -19,7 +19,7 @@ I provide a sqlite database at `data/movielens.db` in order to run the program (
 
 To update it regularly including new movies (or create your own database),
 
-download `movies.csv` and `ratings.csv` from [https://www.ssa.gov/oact/babynames/limits.html](https://grouplens.org/datasets/movielens/) and place them in the folder `data`.
+download `movies.csv` and `ratings.csv` from [https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/) and place them in the folder `data`.
 
 Then run `python prepare_database.py` (make sure you delete the old database before).
 
