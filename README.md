@@ -1,5 +1,6 @@
 # Movie-recommender
 ---
+[![Build Status](https://travis-ci.com/vbelz/Movie-recommender.svg?branch=master)](https://travis-ci.com/vbelz/Movie-recommender)
 >
 >
 ## Introduction
@@ -40,6 +41,14 @@ Below, a word cloud created based on the appearance of movies genres in the data
 The python file that will house the instructions for launching a web server is
 available at `application.py`
 
+It consists in three functions `index`, `recommender` and `results` related to the templates
+`index.html`, `recommender.html` and `results.html` provided in `templates` folder.
+
+The index page will welcome the user and invite him to access the recommender page. In the recommender page,
+the user will be asked to fill a form and rate 5 movies of his choice. These movies and rating will be passed
+to the results function via request.args. Then, the Recommender class (see next section for more details)
+will be instantiate with these values and will predict the 5 movies to recommend. These movies will then be
+printed in the `results.html` page.
 
 
 <img src="img/form_page.png" alt="website form" title="website form" />
