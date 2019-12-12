@@ -8,8 +8,8 @@
 <img src="img/demo_movie_compressed.gif" alt="Demo website movie recommender" title="Movie recommender"/>
 
 This project aims at building a movie recommender with a Flask web interface.
-You can visit the website at this [link](http://vincentbelz.pythonanywhere.com).Please note that it might
-take up to 1 min to display the result page (i have limited resources in the free plan).
+You can visit the website at this [link](http://vincentbelz.pythonanywhere.com).
+Please note that it might take up to 1 min to display the result page (i have limited resources in the free plan).
 
 The dataset of movies and ratings I will be using is the movielens dataset available at:
 
