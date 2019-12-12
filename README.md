@@ -1,7 +1,3 @@
-<script type="text/javascript" async
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?
-config=TeX-MML-AM_CHTML"
-</script>
 # Movie-recommender
 ---
 [![Build Status](https://travis-ci.com/vbelz/Movie-recommender.svg?branch=master)](https://travis-ci.com/vbelz/Movie-recommender)
@@ -11,8 +7,9 @@ config=TeX-MML-AM_CHTML"
 
 <img src="img/demo_movie_compressed.gif" alt="Demo website movie recommender" title="Movie recommender"/>
 
-This project aims at building a movie recommender with a Flask web interface. You can visit the website at
-this [link](http://vincentbelz.pythonanywhere.com).Please note that it might take up to 1 min to display the result page (i have limited resources in the free plan).
+This project aims at building a movie recommender with a Flask web interface.
+You can visit the website at this [link](http://vincentbelz.pythonanywhere.com).Please note that it might
+take up to 1 min to display the result page (i have limited resources in the free plan).
 
 The dataset of movies and ratings I will be using is the movielens dataset available at:
 
@@ -22,9 +19,7 @@ The dataset of movies and ratings I will be using is the movielens dataset avail
 
 I provide a sqlite database at `data/movielens.db` in order to run the program (this section can be skipped to test the recommender).
 
-To update it regularly including new movies (or create your own database),
-
-download `movies.csv` and `ratings.csv` from [https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/) and place them in the folder `data`.
+To update it regularly including new movies (or create your own database), download `movies.csv` and `ratings.csv` from [https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/) and place them in the folder `data`.
 
 Then run `python prepare_database.py` (make sure you delete the old database before).
 
@@ -78,8 +73,6 @@ not present in the folder, the class will train a model from scratch using the d
 
 `prediction_cosim` will predict the movies based on cosine similarity between the new vector of movies ratings
 by the user and the movies ratings of all users of the database.
-
-$$cos(X,Y) = \frac{X*Y}{\left||X |\right| * \left||Y |\right|}.$$
 
 It will select the three closest users from the database and pick up 5 of the best rated movies by these users(excluding the movies already rated by the new user).
 
